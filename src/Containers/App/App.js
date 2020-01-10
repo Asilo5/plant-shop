@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import  { getPlants } from '../../apiCalls';
-import NavBar from '../../Components/NavBar';
+import NavBar from '../../Components/NavBar/NavBar';
 
 class App extends Component  {
    
