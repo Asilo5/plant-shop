@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Search from '../../Containers/Search';
+import Search from '../../Containers/Search/Search';
 
 const NavBar  = () => {
 
