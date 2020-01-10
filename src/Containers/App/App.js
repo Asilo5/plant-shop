@@ -7,7 +7,7 @@ class App extends Component  {
    
   componentDidMount = () => {
     getPlants()
-      .then(plants => console.log(plants))
+      .then(plants => console.log(plants.plants))
       .catch(err => console.log(err))
   }
 
