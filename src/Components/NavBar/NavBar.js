@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavBar.scss';
 
 import Search from '../../Containers/Search/Search';
 
