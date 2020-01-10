@@ -13,12 +13,12 @@ class App extends Component  {
 
   render() {
     return (
-      <section>
+      <main>
          <NavBar />
          <header>
              <h2> Plan(t) your Garden!</h2>
          </header>
-      </section>
+      </main>
     )
   }
 }
