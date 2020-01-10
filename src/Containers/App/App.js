@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import  { getPlants } from '../../apiCalls';
+import NavBar from '../../Components/NavBar';
 
 class App extends Component  {
    
@@ -13,7 +14,7 @@ class App extends Component  {
   render() {
     return (
       <section>
-         <p>Plants</p>
+         <NavBar />
       </section>
     )
   }
