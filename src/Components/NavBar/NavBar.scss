@@ -2,6 +2,9 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    h1 {
+      font-size: 2em;
+    }
     div {
         display: flex;
         .nav {
