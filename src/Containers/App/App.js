@@ -15,6 +15,9 @@ class App extends Component  {
     return (
       <section>
          <NavBar />
+         <header>
+             <h2> Plan(t) your Garden!</h2>
+         </header>
       </section>
     )
   }
