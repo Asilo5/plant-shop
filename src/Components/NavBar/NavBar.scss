@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    h1 {
+      font-size: 2em;
+    }
+    div {
+        display: flex;
+        .nav {
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        input {
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid black;
+            margin-right: 5px;
+        }
+        button {
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            padding-right: 10px;
+            transition: all .2s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+    }
+}
