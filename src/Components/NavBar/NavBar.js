@@ -12,8 +12,8 @@ const NavBar  = () => {
 
            <div>
                <Search />
-               <NavLink to='/addPlant'>Add Plant </NavLink>
-               <NavLink to='/lovedPlant'>Loved Plant</NavLink>
+               <NavLink to='/addPlant' className='nav' >Add Plant </NavLink>
+               <NavLink to='/lovedPlant' className='nav' >Loved Plants</NavLink>
            </div>
         </nav>
     )
