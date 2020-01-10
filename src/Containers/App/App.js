@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import './App.scss';
 import  { getPlants } from '../../apiCalls';
+import { addPlants } from '../../actions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import NavBar from '../../Components/NavBar/NavBar';
 
 class App extends Component  {
    
   componentDidMount = () => {
+    const { addPlants } = this.props;
     getPlants()
-      .then(plants => console.log(plants))
+      .then(plants => addPlants(plants.plants))
       .catch(err => console.log(err))
   }
 
@@ -23,4 +27,10 @@ class App extends Component  {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({
+    addPlants: setPlants => dispatch( addPlants(setPlants) )
+  }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(App);
