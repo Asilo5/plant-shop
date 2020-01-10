@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.scss';
+import { FaSearch } from 'react-icons/fa';
 
 class Search extends Component {
     constructor() {
@@ -16,7 +17,7 @@ class Search extends Component {
     render() {
         return (
             <form>
-                <button> <span role='img' aria-label='search button'>🔍</span></button>
+                <button> <FaSearch/> </button>
                 <input placeholder='Search' 
                         type='text' 
                         name='plant' 

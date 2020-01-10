@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.scss';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 import Search from '../../Containers/Search/Search';
 
