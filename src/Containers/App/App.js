@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NavBar from '../../Components/NavBar/NavBar';
 
-class App extends Component  {
+export class App extends Component  {
    
   componentDidMount = () => {
     const { addPlants } = this.props;
@@ -27,7 +27,7 @@ class App extends Component  {
   }
 }
 
-const mapDispatchToProps = (dispatch) => (
+export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     addPlants: setPlants => dispatch( addPlants(setPlants) )
   }, dispatch)
