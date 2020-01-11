@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component should match snapshot 1`] = `
+<nav>
+  <h1>
+    Plant Shop
+  </h1>
+  <div>
+    <Search />
+    <NavLink
+      className="nav"
+      to="/addPlant"
+    >
+      Add Plant 
+    </NavLink>
+    <NavLink
+      className="nav"
+      to="/lovedPlant"
+    >
+      Loved Plants
+    </NavLink>
+  </div>
+</nav>
+`;
