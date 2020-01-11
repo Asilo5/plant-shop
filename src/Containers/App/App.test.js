@@ -1,7 +1,7 @@
 import React from 'react';
 import { App, mapDispatchToProps } from './App';
 import { shallow } from 'enzyme';
-import { addPlants } from '../../actions';
+import { addPlants, hasError } from '../../actions';
 import  { getPlants } from '../../apiCalls';
 
 jest.mock('../../apiCalls');
@@ -54,6 +54,8 @@ describe('App container', () => {
       }
     ];
 
+    let mockError = 'No plants found';
+
     const mockDispatch = jest.fn();
 
     it('should dispatch addPlants', () => {
@@ -61,6 +63,14 @@ describe('App container', () => {
       const mappedProps = mapDispatchToProps(mockDispatch);
 
       mappedProps.addPlants(mockPlants);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    })
+
+    it('should dispatch hasErro', () => {
+      const actionToDispatch = hasError(mockError);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+
+      mappedProps.hasError(mockError);
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     })
   })
