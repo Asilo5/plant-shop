@@ -5,7 +5,9 @@ const PlantsContainer = () => {
 
     return(
       <section>
-          <h2>Our Plants</h2>
+          <div className='plants-header'>
+            <h2>Our Plants</h2>
+          </div>
       </section>
     )
 }
