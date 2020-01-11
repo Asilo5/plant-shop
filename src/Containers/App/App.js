@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './App.scss';
 import  { getPlants } from '../../apiCalls';
-import { addPlants } from '../../actions';
+import { addPlants, hasError } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NavBar from '../../Components/NavBar/NavBar';
 
-class App extends Component  {
+export class App extends Component  {
    
   componentDidMount = () => {
-    const { addPlants } = this.props;
+    const { addPlants, hasError } = this.props;
     getPlants()
       .then(plants => addPlants(plants.plants))
-      .catch(err => console.log(err))
+      .catch(err => hasError(err.error))
   }
 
   render() {
@@ -27,9 +27,10 @@ class App extends Component  {
   }
 }
 
-const mapDispatchToProps = (dispatch) => (
+export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
-    addPlants: setPlants => dispatch( addPlants(setPlants) )
+    addPlants: setPlants => dispatch( addPlants(setPlants) ),
+    hasError: error => dispatch( hasError(error) )
   }, dispatch)
 )
 

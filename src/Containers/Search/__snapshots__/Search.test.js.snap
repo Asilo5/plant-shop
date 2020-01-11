@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Component should match snapshot 1`] = `
+<form>
+  <button>
+     
+    <FaSearch />
+     
+  </button>
+  <input
+    name="plant"
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+    value=""
+  />
+</form>
+`;
