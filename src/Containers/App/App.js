@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import { Route } from 'react-router-dom';
 
 import NavBar from '../../Components/NavBar/NavBar';
-// import PlantsContainer from '../PlantsContainer';
+import PlantsContainer from '../PlantsContainer';
 // import AddPlants from '../AddPlants';
 // import FavouritesContainer from '../FavouritesContainer';
 import Header from '../../Components/Header/Header';
@@ -26,7 +26,7 @@ export class App extends Component  {
       <main>
          <NavBar />
          <Route exact path='/' component={Header} />
-         {/* <Route exact path='/allPlants' component={PlantsContainer} /> */}
+         <Route exact path='/allPlants' component={PlantsContainer} />
          {/* <Route exact path='/addPlants' component={AddPlants} /> */}
          {/* <Route exact path='/favourites' component={FavouritesContainer} /> */}
       </main>
