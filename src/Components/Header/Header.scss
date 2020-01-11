@@ -1,0 +1,29 @@
+header {
+    background-image: url('https://images.unsplash.com/photo-1503149779833-1de50ebe5f8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    width: 90%;
+    margin: auto;
+    box-shadow: 5px 5px 5px #888888;
+    border: 10px solid white;
+    .header-section {
+        position: relative;
+        top: 15em;
+        text-align: center;
+    }
+    h2 {
+      font-size: 6em;
+      margin: 0;
+      color: white;
+      font-family: 'Catamaran', sans-serif;
+      margin-bottom: 20px;
+    }
+    .link-to-plants {
+        border: 2px solid white;
+        padding: 13px;
+        font-size: 2em;
+        text-decoration: none;
+        color: white;
+    }
+  }
