@@ -25,5 +25,9 @@ header {
         font-size: 2em;
         text-decoration: none;
         color: white;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
     }
   }
