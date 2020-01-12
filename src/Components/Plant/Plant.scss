@@ -24,6 +24,10 @@
             border: none;
             font-size: 2em;
             color: #808080c2;
+            &:hover {
+                cursor: pointer;
+                color: cadetblue;
+            }
         }
     }
 }

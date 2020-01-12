@@ -1,7 +1,6 @@
 import React from 'react';
 import './Plant.scss';
 import { Link } from 'react-router-dom';
-
 import { FaSeedling } from 'react-icons/fa';
 
 const Plant = ({_id, name, price, image}) => {
