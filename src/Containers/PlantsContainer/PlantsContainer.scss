@@ -13,9 +13,9 @@
 
 .plant-list {
     display: flex;
+    justify-content: center;
     height: 51vh;
     flex-wrap: wrap;
-    margin-top: 20px;
     padding: 30px;
     background: white;
     overflow: scroll;

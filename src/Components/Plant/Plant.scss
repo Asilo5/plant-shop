@@ -2,6 +2,9 @@
     margin: 25px;
     border: 1px solid #e6d3d3;
     border-radius: 2px;
+    &:hover {
+        box-shadow: 5px 5px 5px #b4b1b1;
+    }
     img {
         width: 87%;
         margin: auto;
@@ -9,6 +12,8 @@
         margin-top: 20px;
     }
     p {
+        text-decoration: none;
+        color: black;
         font-size: 30px;
         margin-left: 35px;
     }

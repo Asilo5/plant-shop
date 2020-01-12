@@ -1,6 +1,7 @@
 import React from 'react';
 import './PlantsContainer.scss';
 import Plant from '../../Components/Plant/Plant';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 export const PlantsContainer = ({ allPlants }) => {
@@ -13,9 +14,9 @@ export const PlantsContainer = ({ allPlants }) => {
           <div className='plants-header'>
             <h2>Our Plants</h2>
           </div>
-          <section className='plant-list'>
+          <NavLink to='' className='plant-list'>
             {plantsList}
-          </section>
+          </NavLink>
       </section>
     )
 }
