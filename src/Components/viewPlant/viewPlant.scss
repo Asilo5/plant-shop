@@ -1,0 +1,49 @@
+.view-plant {
+    background: white;
+    padding: 40px;
+    width: 80%;
+    margin: 45px auto;
+    height: 70vh;
+    box-shadow: 5px 5px 5px #888888;
+    .buttons-section {
+        display: flex;
+        justify-content: space-between;
+        .back-button {
+          text-decoration: none;
+          font-size: 20px;
+          color: black;
+          &:hover {
+              font-weight: bold;
+          }
+        }
+        button {
+            border: none;
+            font-size: 2em;
+            color: #808080c2;
+            padding: 10px 10px 0 10px;
+            border: 2px solid transparent;
+            &:hover {
+                border: 2px solid cadetblue;
+                border-radius: 50%;
+                cursor: pointer;
+                color: cadetblue;
+            }
+        }
+
+    }
+    .all-plant {
+        display: flex;
+        justify-content: space-around;
+        .view-plant-info {
+          h2 {
+              font-size: 4em;
+          }
+          h3 {
+              font-size: 2em;
+          }
+          p {
+              font-size: 22px;
+          }
+        }
+    }
+}

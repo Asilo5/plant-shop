@@ -1,0 +1,22 @@
+.plants-header {
+    background-image: url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    h2 {
+        text-align: center;
+        position: relative;
+        top: 133px;
+        font-size: 5em;
+    }
+}
+
+.plant-list {
+    display: flex;
+    justify-content: center;
+    height: 51vh;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: white;
+    overflow: scroll;
+}

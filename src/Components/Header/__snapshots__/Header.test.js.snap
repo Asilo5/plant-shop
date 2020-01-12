@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match Snapshot 1`] = `
+<header>
+  <section
+    className="header-section"
+  >
+    <h2>
+       Plan(t) your Garden!
+    </h2>
+    <NavLink
+      className="link-to-plants"
+      to="/allplants"
+    >
+      SEE OUR PLANTS
+    </NavLink>
+  </section>
+</header>
+`;

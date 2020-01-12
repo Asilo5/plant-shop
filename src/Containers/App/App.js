@@ -4,7 +4,14 @@ import  { getPlants } from '../../apiCalls';
 import { addPlants, hasError } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Route } from 'react-router-dom';
+
 import NavBar from '../../Components/NavBar/NavBar';
+import ViewPlant from '../../Components/ViewPlant/ViewPlant';
+import PlantsContainer from '../PlantsContainer/PlantsContainer';
+// import AddPlants from '../AddPlants';
+// import FavouritesContainer from '../FavouritesContainer';
+import Header from '../../Components/Header/Header';
 
 export class App extends Component  {
    
@@ -19,13 +26,26 @@ export class App extends Component  {
     return (
       <main>
          <NavBar />
-         <header>
-             <h2> Plan(t) your Garden!</h2>
-         </header>
+         <Route exact path='/' component={Header} />
+         <Route exact path='/allPlants' component={PlantsContainer} />
+         <Route exact path='/plant/:id' render={ ({ match }) => {
+           const { id } = match.params;
+           const { allPlants } = this.props;
+
+           let plantsList = allPlants.find((plant) => plant._id === id);
+
+           return <ViewPlant {...plantsList} />
+         } } />
+         {/* <Route exact path='/addPlants' component={AddPlants} /> */}
+         {/* <Route exact path='/favourites' component={FavouritesContainer} /> */}
       </main>
     )
   }
 }
+
+export const mapStateToProps = (state) => ({
+  allPlants: state.allPlants
+})
 
 export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
@@ -34,4 +54,4 @@ export const mapDispatchToProps = (dispatch) => (
   }, dispatch)
 )
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

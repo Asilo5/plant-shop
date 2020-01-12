@@ -1,0 +1,33 @@
+.plant-info {
+    margin: 25px;
+    border: 1px solid #e6d3d3;
+    border-radius: 2px;
+    &:hover {
+        box-shadow: 5px 5px 5px #b4b1b1;
+    }
+    img {
+        width: 87%;
+        margin: auto;
+        display: block;
+        margin-top: 20px;
+    }
+    .plant-name {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 36px;
+        p {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        button {
+            border: none;
+            font-size: 2em;
+            color: #808080c2;
+            &:hover {
+                cursor: pointer;
+                color: cadetblue;
+            }
+        }
+    }
+}
