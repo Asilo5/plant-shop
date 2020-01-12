@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlantsContainer container PlantsContainer should match snapshot 1`] = `
+<section>
+  <div
+    className="plants-header"
+  >
+    <h2>
+      Our Plants
+    </h2>
+  </div>
+  <div
+    className="plant-list"
+  >
+    <Plant
+      __v={0}
+      _id="5e16b29d88553086edcddc53"
+      care="Lots of Love"
+      description="Healing plant"
+      image="https://target.scene7.com/is/image/Target/GUEST_be7e6313-15ac-4e1c-94b8-8af5595d6cb6?wid=488&hei=488&fmt=pjpeg"
+      key="5e16b29d88553086edcddc53"
+      name="Aloe Queen"
+      price={20}
+    />
+  </div>
+</section>
+`;

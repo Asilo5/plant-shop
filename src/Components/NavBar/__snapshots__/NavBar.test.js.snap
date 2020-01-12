@@ -2,9 +2,12 @@
 
 exports[`NavBar component should match snapshot 1`] = `
 <nav>
-  <h1>
+  <NavLink
+    className="logo"
+    to="/"
+  >
     Plant Shop
-  </h1>
+  </NavLink>
   <div>
     <Search />
     <NavLink
