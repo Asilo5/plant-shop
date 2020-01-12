@@ -9,7 +9,7 @@ import { Route } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import ViewPlant from '../../Components/ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
-// import AddPlants from '../AddPlants';
+import AddPlants from '../AddPlants/AddPlants';
 // import FavouritesContainer from '../FavouritesContainer';
 import Header from '../../Components/Header/Header';
 
@@ -36,8 +36,8 @@ export class App extends Component  {
 
            return <ViewPlant {...plantsList} />
          } } />
-         {/* <Route exact path='/addPlants' component={AddPlants} /> */}
-         {/* <Route exact path='/favourites' component={FavouritesContainer} /> */}
+         <Route exact path='/addPlants' component={AddPlants} />
+         {/* <Route exact path='/lovedPlants' component={FavouritesContainer} /> */}
       </main>
     )
   }

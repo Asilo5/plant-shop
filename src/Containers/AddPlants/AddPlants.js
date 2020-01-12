@@ -13,6 +13,10 @@ class AddPlants extends Component {
         }
     }
 
+    handleChange = (e) => {
+       this.setState({ [e.target.state] : e.target.value })
+    }
+
     render() {
         return (
             <section className='add-plant-section'>
