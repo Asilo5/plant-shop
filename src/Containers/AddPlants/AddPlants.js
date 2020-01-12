@@ -16,7 +16,21 @@ class AddPlants extends Component {
     handleChange = (e) => {
         this.setState({ [e.target.name] : e.target.value })
         this.setState({ price : parseInt(e.target.value) })
-      }
+    }
+
+    handleSubmit = () => {
+        
+    }
+
+    clearInputs = () => {
+        this.setState( {
+            name: '',
+            description: '',
+            care: '',
+            price: 0,
+            image: ''
+        })
+    }
 
     render() {
         return (
