@@ -27,6 +27,7 @@ export class App extends Component  {
          <NavBar />
          <Route exact path='/' component={Header} />
          <Route exact path='/allPlants' component={PlantsContainer} />
+         <Route exact path='/plant' component={viewPlant} />
          {/* <Route exact path='/addPlants' component={AddPlants} /> */}
          {/* <Route exact path='/favourites' component={FavouritesContainer} /> */}
       </main>
