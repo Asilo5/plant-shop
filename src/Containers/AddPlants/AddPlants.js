@@ -20,6 +20,7 @@ class AddPlants extends Component {
     render() {
         return (
             <section className='add-plant-section'>
+                <h2>Add Your Plants!</h2>
                 <form>
                     <label>Name of Plant:</label>
                     <input type='text'
