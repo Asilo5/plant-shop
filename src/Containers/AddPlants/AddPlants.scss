@@ -26,9 +26,14 @@
             margin: 20px;
             border-radius: 10px;
             padding: 5px;
-            color: white;
+            border: 1px solid cadetblue;
             font-weight: bold;
-            background-color: darkseagreen;
+            color: cadetblue;
+            &:hover {
+                background-color: cadetblue;
+                color: white;
+                cursor: pointer;
+            }
         }
     }
 }
