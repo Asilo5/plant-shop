@@ -5,12 +5,12 @@ exports[`Header should match Snapshot 1`] = `
   <section
     className="header-section"
   >
-    <h2>
+    <h1>
        Plan(t) your Garden!
-    </h2>
+    </h1>
     <NavLink
       className="link-to-plants"
-      to="/allplants"
+      to="/allPlants"
     >
       SEE OUR PLANTS
     </NavLink>

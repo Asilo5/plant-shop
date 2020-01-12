@@ -3,10 +3,28 @@
 exports[`App container App should match snapshot with all information passing in correctly 1`] = `
 <main>
   <NavBar />
-  <header>
-    <h2>
-       Plan(t) your Garden!
-    </h2>
-  </header>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(PlantsContainer)",
+        "type": [Function],
+      }
+    }
+    exact={true}
+    path="/allPlants"
+  />
+  <Route
+    exact={true}
+    path="/plant/:id"
+    render={[Function]}
+  />
 </main>
 `;
