@@ -1,5 +1,15 @@
 .plant-info {
+    margin: 25px;
+    border: 1px solid #e6d3d3;
+    border-radius: 2px;
     img {
         width: 87%;
+        margin: auto;
+        display: block;
+        margin-top: 20px;
+    }
+    p {
+        font-size: 30px;
+        margin-left: 35px;
     }
 }
