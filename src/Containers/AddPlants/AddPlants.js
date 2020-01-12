@@ -14,8 +14,9 @@ class AddPlants extends Component {
     }
 
     handleChange = (e) => {
-       this.setState({ [e.target.state] : e.target.value })
-    }
+        this.setState({ [e.target.name] : e.target.value })
+        this.setState({ price : parseInt(e.target.value) })
+      }
 
     render() {
         return (
@@ -25,8 +26,8 @@ class AddPlants extends Component {
                     <label>Name of Plant:</label>
                     <input type='text'
                            name='name'
-                           value={this.state.name} 
-                           onChange={(e) => this.handleChange(e)} />
+                           value={this.state.name}
+                           onChange={(e) => this.handleChange(e)}/>
                     <label>Description:</label>
                     <input type='text'
                            name='description'
@@ -37,15 +38,15 @@ class AddPlants extends Component {
                            name='care'
                            value={this.state.care} 
                            onChange={(e) => this.handleChange(e)}/>
-                    <label>Price:</label>
-                    <input type='text'
-                           name='price'
-                           value={this.state.price} 
-                           onChange={(e) => this.handleChange(e)}/>
                     <label>Add Image:</label>
                     <input type='text'
                            name='image'
                            value={this.state.image} 
+                           onChange={(e) => this.handleChange(e)}/>
+                    <label>Price:</label>
+                    <input type='number'
+                           name='price'
+                           value={this.state.price} 
                            onChange={(e) => this.handleChange(e)}/>
                     <button>SUBMIT</button>
                 </form>
