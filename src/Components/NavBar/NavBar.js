@@ -8,7 +8,7 @@ const NavBar  = () => {
 
     return ( 
         <nav>
-           <h1>Plant Shop</h1>
+           <NavLink to='/' className='logo'>Plant Shop</NavLink>
 
            <div>
                <Search />

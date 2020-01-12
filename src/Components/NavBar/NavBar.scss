@@ -2,8 +2,11 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    h1 {
+    .logo {
       font-size: 2em;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
     }
     div {
         display: flex;
