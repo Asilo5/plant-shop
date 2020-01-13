@@ -27,7 +27,6 @@ export class App extends Component  {
     deletePlantFetch(id)
       .then(plants => deletePlant(plants.plants._id))
       .catch(err => hasError(err.error))
-
   }
 
   render() {

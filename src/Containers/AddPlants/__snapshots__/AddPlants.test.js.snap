@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddPlants container AddPlants should match snapshot 1`] = `
+<section
+  className="add-plant-section"
+>
+  <h2>
+    Add Your Plants!
+  </h2>
+  <NavLink
+    className="added-msg"
+    to="/allPlants"
+  >
+    Posted Plant
+  </NavLink>
+  <form>
+    <label>
+      Name of Plant:
+    </label>
+    <input
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Description:
+    </label>
+    <input
+      name="description"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Care of Plant:
+    </label>
+    <input
+      name="care"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Add Image:
+    </label>
+    <input
+      name="image"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <label>
+      Price:
+    </label>
+    <input
+      name="price"
+      onChange={[Function]}
+      type="number"
+      value={0}
+    />
+    <button
+      onClick={[Function]}
+    >
+      SUBMIT
+    </button>
+  </form>
+</section>
+`;
