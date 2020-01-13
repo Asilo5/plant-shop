@@ -7,7 +7,9 @@ Looking to build your own home garden but have too many choices in different web
 
 ## View Plant Shop locally in your computer
 
-Clone the repo to your terminal :``` $ git clone https://github.com/Asilo5/plant-shop.git```
+First, make sure to run the server of the [Plant Shop API](https://github.com/Asilo5/plant-shop-api) 
+
+Once API server is running, clone the repo to your terminal :``` $ git clone https://github.com/Asilo5/plant-shop.git```
 
 Run ``` $ npm install ``` in your terminal
 
