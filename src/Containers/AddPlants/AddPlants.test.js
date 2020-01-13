@@ -139,7 +139,20 @@ describe('AddPlants container', () => {
     });
 
     describe('mapStateToProps', () => {
-        
+        it('should return an object with current state used in component', () => {
+            const mockState = {
+                succeededMsg: 'Success!',
+                errorMsg: 'Error!'
+            };
+
+            const expected = {
+                succeededMsg: 'Success!',
+                errorMsg: 'Error!'
+            };
+
+            const mappedProps = mapStateToProps(mockState);
+            expect(mappedProps).toEqual(expected);
+        })
     });
 
     describe('mapDispatchToProps', () => {
