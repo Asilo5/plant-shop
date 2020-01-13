@@ -25,7 +25,7 @@ export const mapStateToProps = (state) => ({
     allPlants: state.allPlants
 });
 
-PlantsContainer.propTypes = {
+PlantsContainer.propTypes = { 
   allPlants: PropTypes.array
 }
 
