@@ -49,7 +49,7 @@ export const deletePlantFetch = async (id) => {
     }
   };
 
-  const resp = await fetch(`http://localhost:3001/${id}`, options)
+  const resp = await fetch(`http://localhost:3001/deletePlant/${id}`, options)
   const data = await resp.json();
 
   if (!resp.ok) {

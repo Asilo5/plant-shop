@@ -21,4 +21,14 @@ export const successMsg = (msg) => ({
 export const deletePlant = (id) => ({
   type: 'DELETE_PLANT',
   id
-})
+});
+
+export const addFavouritePlant = (id) => ({
+  type: 'ADD_FAVOURITE',
+  id
+});
+
+export const deleteFavouritePlant = (id) => ({
+  type: 'DELETE_FAVOURITE',
+  id
+}); 

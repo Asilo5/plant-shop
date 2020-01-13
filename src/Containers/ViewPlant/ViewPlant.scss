@@ -4,6 +4,7 @@
     width: 80%;
     margin: 45px auto;
     height: 70vh;
+    overflow: scroll;
     box-shadow: 5px 5px 5px #888888;
     .buttons-section {
         display: flex;
@@ -16,7 +17,7 @@
               font-weight: bold;
           }
         }
-        button {
+        .unloved-plant {
             border: none;
             font-size: 2em;
             color: #808080c2;
@@ -27,6 +28,16 @@
                 border-radius: 50%;
                 cursor: pointer;
                 color: cadetblue;
+            }
+        }
+        .loved-plant {
+            @extend .unloved-plant;
+            color: cadetblue;
+            border: 2px solid cadetblue;
+            border-radius: 50%;
+            &:hover {
+                color: #808080c2;
+                border: 2px solid transparent;
             }
         }
 

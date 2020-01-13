@@ -31,6 +31,7 @@ export class AddPlants extends Component {
 
        postPlant(this.state)
          .then(data => {
+             console.log(data);
             newPlant(data.plants);
             successMsg('YOUR PLANT IS PUBLISHED, CLICK HERE!');
          })

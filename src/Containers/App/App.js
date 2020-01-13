@@ -10,7 +10,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import ViewPlant from '../../Components/ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
 import AddPlants from '../AddPlants/AddPlants';
-// import FavouritesContainer from '../FavouritesContainer';
+import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import Header from '../../Components/Header/Header';
 
 export class App extends Component  {
@@ -25,7 +25,10 @@ export class App extends Component  {
   deleteThePlant = (id) => {
     const { deletePlant, hasError } = this.props;
     deletePlantFetch(id)
-      .then(plants => deletePlant(plants.plants._id))
+      .then(plants => {
+        console.log(plants)
+        deletePlant(plants.plants._id)
+      })
       .catch(err => hasError(err.error))
   }
 
@@ -44,7 +47,7 @@ export class App extends Component  {
            return <ViewPlant {...plantsList} deleteThePlant={this.deleteThePlant} />
          } } />
          <Route exact path='/addPlants' component={AddPlants} />
-         {/* <Route exact path='/lovedPlants' component={FavouritesContainer} /> */}
+         <Route exact path='/lovedPlants' component={FavouritesContainer} />
       </main>
     )
   }
