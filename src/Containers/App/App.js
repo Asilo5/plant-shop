@@ -60,7 +60,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     addPlants: setPlants => dispatch( addPlants(setPlants) ),
-    // hasError: error => dispatch( hasError(error) ),
+    hasError: error => dispatch( hasError(error) ),
     deletePlant: id => dispatch( deletePlant(id) )
   }, dispatch)
 )
