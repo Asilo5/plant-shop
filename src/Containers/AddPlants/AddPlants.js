@@ -49,9 +49,12 @@ export class AddPlants extends Component {
     }
 
     render() {
+        const { succeededMsg, errorMsg} = this.props;
         return (
             <section className='add-plant-section'>
                 <h2>Add Your Plants!</h2>
+                <p>{succeededMsg}</p>
+                <p>{errorMsg}</p>
                 <form>
                     <label>Name of Plant:</label>
                     <input type='text'
@@ -85,8 +88,9 @@ export class AddPlants extends Component {
     }
 }
 
-export const mapStateToProps = ({succeededMsg}) => ({
-    succeededMsg
+export const mapStateToProps = ({succeededMsg, errorMsg}) => ({
+    succeededMsg, 
+    errorMsg
 });
 
 export const mapDispatchToProps = (dispatch) => (
