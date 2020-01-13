@@ -26,7 +26,11 @@ Plant Shop was built using:
   - Enzyme
   - API I built for the Plant Shop, [Plant Shop API](https://github.com/Asilo5/plant-shop-api)
   
-## Image of Plant Shop
+<details>
+  <summary> ## Image of Plant Shop </summary>
 
-![app image]()
+![Start Page](https://github.com/Asilo5/plant-shop/blob/master/Screenshot%202020-01-13%20at%2011.05.17.png)
+![Selected Plant Page](https://github.com/Asilo5/plant-shop/blob/master/Screenshot%202020-01-13%20at%2011.05.40.png)
+
+</details>
 
