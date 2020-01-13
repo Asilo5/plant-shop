@@ -1,6 +1,6 @@
 import React from 'react';
 import './PlantsContainer.scss';
-import Plant from '../../Components/Plant/Plant';
+import Plant from '../Plant/Plant';
 import { connect } from 'react-redux';
 
 export const PlantsContainer = ({ allPlants }) => {

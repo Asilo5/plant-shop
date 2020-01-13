@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux';
 import { Route } from 'react-router-dom';
 
 import NavBar from '../../Components/NavBar/NavBar';
-import ViewPlant from '../../Components/ViewPlant/ViewPlant';
+import ViewPlant from '../ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
 import AddPlants from '../AddPlants/AddPlants';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
