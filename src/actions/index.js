@@ -11,4 +11,14 @@ export const hasError = (error) => ({
 export const newPlant = (plant) => ({
   type: 'NEW_PLANT',
   plant
+});
+
+export const successMsg = (msg) => ({
+   type: 'SUCCESS_MSG',
+   msg
+});
+
+export const deletePlant = (id) => ({
+  type: 'DELETE_PLANT',
+  id
 })
