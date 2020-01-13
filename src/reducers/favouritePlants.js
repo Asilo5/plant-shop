@@ -1,4 +1,4 @@
-export const favouritePlants = (state='', action) => {
+export const favouritePlants = (state=[], action) => {
   switch(action.type) {
       case 'ADD_FAVOURITE':
         return [...state, action.id]
