@@ -53,8 +53,8 @@ export class AddPlants extends Component {
         return (
             <section className='add-plant-section'>
                 <h2>Add Your Plants!</h2>
-                <p>{succeededMsg}</p>
-                <p>{errorMsg}</p>
+                {succeededMsg.length > 1 ? <p className='added-msg'>{succeededMsg}</p> : <p className='error-msg'>{errorMsg}</p>}
+            
                 <form>
                     <label>Name of Plant:</label>
                     <input type='text'

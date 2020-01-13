@@ -6,8 +6,17 @@
     box-shadow: 10px 10px 10px #b4b1b1;
     h2 {
         text-align: center;
-        padding: 20px;
+        padding: 20px 0px 0px;
         font-size: 3em;
+    }
+    .added-msg {
+       text-align: center;
+       font-size: 20px;
+       color: green;
+    }
+    .error-msg {
+      @extend .added-msg;
+      color: red;
     }
     form {
         display: flex;
