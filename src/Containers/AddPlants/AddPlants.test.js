@@ -156,6 +156,42 @@ describe('AddPlants container', () => {
     });
 
     describe('mapDispatchToProps', () => {
-        
+        let mockNewPlant = {
+            name: 'Aloe',
+            description: 'Green queen',
+            care: 'loads of love',
+            price: 10,
+            image: 'image link'
+        };
+
+        let mockError = 'Error!';
+
+        let mockSuccessMsg = 'Added!';
+
+        const mockDispatch = jest.fn();
+
+        it('should dispatch newPlant', () => {
+            const actionToDispatch = newPlant(mockNewPlant);
+            const mappedProps = mapDispatchToProps(mockDispatch);
+
+            mappedProps.newPlant(mockNewPlant);
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+        })
+
+        it('should dispatch hasError', () => {
+            const actionToDispatch = hasError(mockError);
+            const mappedProps = mapDispatchToProps(mockDispatch);
+
+            mappedProps.hasError(mockError);
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+        })
+
+        it('should dispatch successMsg', () => {
+            const actionToDispatch = successMsg(mockSuccessMsg);
+            const mappedProps = mapDispatchToProps(mockDispatch);
+
+            mappedProps.successMsg(mockSuccessMsg);
+            expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+        })
     });
 })
