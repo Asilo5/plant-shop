@@ -31,5 +31,22 @@ exports[`App container App should match snapshot with all information passing in
     exact={true}
     path="/addPlants"
   />
+  <Route
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(FavouritesContainer)",
+        "propType": Object {
+          "allPlants": [Function],
+          "favouritePlants": [Function],
+        },
+        "type": [Function],
+      }
+    }
+    exact={true}
+    path="/lovedPlants"
+  />
 </main>
 `;

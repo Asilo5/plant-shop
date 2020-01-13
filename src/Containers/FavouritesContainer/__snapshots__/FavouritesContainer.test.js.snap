@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favourties Container Favourties should match snapshot 1`] = `
+<section
+  className="fav-container"
+>
+  <section
+    className="fav-header"
+  >
+    <h2>
+      Your Loved Plants
+    </h2>
+  </section>
+  <section
+    className="fav-section"
+  >
+    <Connect(Plant) />
+    <Connect(Plant) />
+    <Connect(Plant) />
+  </section>
+</section>
+`;
