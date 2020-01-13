@@ -10,7 +10,7 @@ import NavBar from '../../Components/NavBar/NavBar';
 import ViewPlant from '../../Components/ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
 import AddPlants from '../AddPlants/AddPlants';
-// import FavouritesContainer from '../FavouritesContainer';
+import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
 import Header from '../../Components/Header/Header';
 
 export class App extends Component  {
@@ -47,7 +47,7 @@ export class App extends Component  {
            return <ViewPlant {...plantsList} deleteThePlant={this.deleteThePlant} />
          } } />
          <Route exact path='/addPlants' component={AddPlants} />
-         {/* <Route exact path='/lovedPlants' component={FavouritesContainer} /> */}
+         <Route exact path='/lovedPlants' component={FavouritesContainer} />
       </main>
     )
   }
