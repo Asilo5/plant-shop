@@ -68,7 +68,7 @@ export const mapDispatchToProps = (dispatch) => (
 
 App.propTypes = {
   allPlants: PropTypes.array,
-  addPlants: PropTypes.func,
+  addPlants: PropTypes.func, 
   hasError: PropTypes.func,
   deletePlant: PropTypes.func
 }

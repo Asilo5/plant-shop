@@ -12,13 +12,13 @@ exports[`NavBar component should match snapshot 1`] = `
     <Search />
     <NavLink
       className="nav"
-      to="/addPlant"
+      to="/addPlants"
     >
       Add Plant 
     </NavLink>
     <NavLink
       className="nav"
-      to="/lovedPlant"
+      to="/lovedPlants"
     >
       Loved Plants
     </NavLink>
