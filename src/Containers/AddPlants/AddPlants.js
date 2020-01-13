@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AddPlants.scss';
 import { postPlant } from '../../apiCalls';
-import { newPlant, hasError } from '../../actions';
+import { newPlant, hasError, successMsg } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -85,7 +85,8 @@ export class AddPlants extends Component {
 export const mapDispatchToProps = (dispatch) => (
     bindActionCreators({
       newPlant: plant => dispatch(newPlant(plant)),
-      hasError: error => dispatch(hasError(error))
+      hasError: error => dispatch(hasError(error)),
+      successMsg: msg => dispatch(successMsg(msg))
     }, dispatch)
 )
 
