@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import './AddPlants.scss';
+import { postPlant } from '../../apiCalls';
+import { newPlant, hasError } from '../../actions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-class AddPlants extends Component { 
+
+export class AddPlants extends Component { 
     constructor() {
         super();
         this.state = {
@@ -18,8 +23,16 @@ class AddPlants extends Component {
         this.setState({ price : parseInt(e.target.value) })
     }
 
-    handleSubmit = () => {
-        
+    handleSubmit = (e) => {
+      e.preventDefault();
+
+      const {newPlant, hasError} = this.props;
+
+       postPlant(this.state)
+         .then(data => newPlant(data.plants))
+         .catch(err => hasError(err))
+
+       this.clearInputs();
     }
 
     clearInputs = () => {
@@ -62,11 +75,18 @@ class AddPlants extends Component {
                            name='price'
                            value={this.state.price} 
                            onChange={(e) => this.handleChange(e)}/>
-                    <button>SUBMIT</button>
+                    <button onClick={(e) => this.handleSubmit(e)}>SUBMIT</button>
                 </form>
             </section>
         )
     }
 }
 
-export default AddPlants;
+export const mapDispatchToProps = (dispatch) => (
+    bindActionCreators({
+      newPlant: plant => dispatch(newPlant(plant)),
+      hasError: error => dispatch(hasError(error))
+    }, dispatch)
+)
+
+export default connect(null, mapDispatchToProps)(AddPlants);
