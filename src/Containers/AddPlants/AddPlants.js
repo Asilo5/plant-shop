@@ -26,11 +26,14 @@ export class AddPlants extends Component {
     handleSubmit = (e) => {
       e.preventDefault();
 
-      const {newPlant, hasError} = this.props;
+      const {newPlant, hasError, successMsg} = this.props;
 
        postPlant(this.state)
-         .then(data => newPlant(data.plants))
-         .catch(err => hasError(err))
+         .then(data => {
+            newPlant(data.plants);
+            successMsg('YOUR PLANT IS PUBLISHED, YAY!');
+         })
+         .catch(err => hasError('Could not submit plant, try again :( '));
 
        this.clearInputs();
     }
