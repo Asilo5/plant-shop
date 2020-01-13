@@ -40,3 +40,22 @@ export const postPlant = async (plant) => {
 
   return data;
 }
+
+export const deletePlantFetch = async (id) => {
+  const options = {
+    method: 'DELETE',
+    headers: {
+      'Content-Type' : 'application/json'
+    }
+  };
+
+  const resp = await fetch(`http://localhost:3001/${id}`, options)
+  const data = await resp.json();
+
+  if (!resp.ok) {
+    const error = await resp.json();
+    throw new Error(error.message);
+  }
+
+   return data;
+}
