@@ -5,6 +5,7 @@ import { FaSeedling } from 'react-icons/fa';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addFavouritePlant, deleteFavouritePlant } from '../../actions';
+import PropTypes from 'prop-types';
  
 class Plant extends Component {
 
@@ -45,5 +46,11 @@ export const mapDispatchToProps = (dispatch) => (
     deleteFavouritePlant
   }, dispatch)
 );
+
+Plant.propTypes = {
+  favouritePlants: PropTypes.array,
+  addFavouritePlant: PropTypes.func,
+  deleteFavouritePlant: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Plant);

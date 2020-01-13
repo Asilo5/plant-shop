@@ -2,7 +2,7 @@ import React from  'react';
 import './FavouritesContainer.scss';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Plant from '../../Components/Plant/Plant';
+import Plant from '../Plant/Plant';
 
 export const FavouritesContainer = ({favouritePlants, allPlants}) => {
 

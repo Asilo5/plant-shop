@@ -12,7 +12,7 @@ exports[`PlantsContainer container PlantsContainer should match snapshot 1`] = `
   <div
     className="plant-list"
   >
-    <Plant
+    <Connect(Plant)
       __v={0}
       _id="5e16b29d88553086edcddc53"
       care="Lots of Love"

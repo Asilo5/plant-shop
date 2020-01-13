@@ -5,6 +5,7 @@ import { newPlant, hasError, successMsg } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 export class AddPlants extends Component { 
@@ -102,5 +103,13 @@ export const mapDispatchToProps = (dispatch) => (
       successMsg: msg => dispatch(successMsg(msg))
     }, dispatch)
 );
+
+AddPlants.propTypes = {
+    succeededMsg: PropTypes.string,
+    errorMsg: PropTypes.string,
+    newPlant: PropTypes.func,
+    hasError: PropTypes.func,
+    successMsg: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddPlants);

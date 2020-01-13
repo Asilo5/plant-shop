@@ -5,9 +5,10 @@ import { addPlants, hasError, deletePlant } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import NavBar from '../../Components/NavBar/NavBar';
-import ViewPlant from '../../Components/ViewPlant/ViewPlant';
+import ViewPlant from '../ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
 import AddPlants from '../AddPlants/AddPlants';
 import FavouritesContainer from '../FavouritesContainer/FavouritesContainer';
@@ -64,5 +65,12 @@ export const mapDispatchToProps = (dispatch) => (
     deletePlant: id => dispatch( deletePlant(id) )
   }, dispatch)
 )
+
+App.propTypes = {
+  allPlants: PropTypes.array,
+  addPlants: PropTypes.func, 
+  hasError: PropTypes.func,
+  deletePlant: PropTypes.func
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

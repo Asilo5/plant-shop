@@ -1,6 +1,7 @@
 import React from 'react';
 import './PlantsContainer.scss';
-import Plant from '../../Components/Plant/Plant';
+import Plant from '../Plant/Plant';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 export const PlantsContainer = ({ allPlants }) => {
@@ -22,6 +23,10 @@ export const PlantsContainer = ({ allPlants }) => {
 
 export const mapStateToProps = (state) => ({
     allPlants: state.allPlants
-})
+});
+
+PlantsContainer.propTypes = { 
+  allPlants: PropTypes.array
+}
 
 export default connect(mapStateToProps)(PlantsContainer);
