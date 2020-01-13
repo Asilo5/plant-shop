@@ -4,6 +4,7 @@ import { postPlant } from '../../apiCalls';
 import { newPlant, hasError, successMsg } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { NavLink } from 'react-router-dom';
 
 
 export class AddPlants extends Component { 
@@ -31,7 +32,7 @@ export class AddPlants extends Component {
        postPlant(this.state)
          .then(data => {
             newPlant(data.plants);
-            successMsg('YOUR PLANT IS PUBLISHED, YAY!');
+            successMsg('YOUR PLANT IS PUBLISHED, CLICK HERE!');
          })
          .catch(err => hasError('Could not submit plant, try again :( '));
 
@@ -53,7 +54,7 @@ export class AddPlants extends Component {
         return (
             <section className='add-plant-section'>
                 <h2>Add Your Plants!</h2>
-                {succeededMsg.length > 1 ? <p className='added-msg'>{succeededMsg}</p> : <p className='error-msg'>{errorMsg}</p>}
+                {succeededMsg.length > 1 ? <NavLink to='/allPlants' className='added-msg'>{succeededMsg}</NavLink> : <p className='error-msg'>{errorMsg}</p>}
             
                 <form>
                     <label>Name of Plant:</label>
