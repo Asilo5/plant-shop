@@ -25,7 +25,10 @@ export class App extends Component  {
   deleteThePlant = (id) => {
     const { deletePlant, hasError } = this.props;
     deletePlantFetch(id)
-      .then(plants => deletePlant(plants.plants._id))
+      .then(plants => {
+        console.log(plants)
+        deletePlant(plants.plants._id)
+      })
       .catch(err => hasError(err.error))
   }
 
@@ -57,7 +60,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     addPlants: setPlants => dispatch( addPlants(setPlants) ),
-    hasError: error => dispatch( hasError(error) ),
+    // hasError: error => dispatch( hasError(error) ),
     deletePlant: id => dispatch( deletePlant(id) )
   }, dispatch)
 )
