@@ -82,12 +82,16 @@ export class AddPlants extends Component {
     }
 }
 
+export const mapStateToProps = ({succeededMsg}) => ({
+    succeededMsg
+});
+
 export const mapDispatchToProps = (dispatch) => (
     bindActionCreators({
       newPlant: plant => dispatch(newPlant(plant)),
       hasError: error => dispatch(hasError(error)),
       successMsg: msg => dispatch(successMsg(msg))
     }, dispatch)
-)
+);
 
-export default connect(null, mapDispatchToProps)(AddPlants);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPlants);
