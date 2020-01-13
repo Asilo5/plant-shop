@@ -20,13 +20,20 @@
             color: black;
             font-size: 30px;
         }
-        button {
+        .unloved-plant {
             border: none;
             font-size: 2em;
             color: #808080c2;
             &:hover {
                 cursor: pointer;
                 color: cadetblue;
+            }
+        }
+        .loved-plant {
+            @extend .unloved-plant;
+            color: cadetblue;
+            &:hover {
+                color: #808080c2;
             }
         }
     }
