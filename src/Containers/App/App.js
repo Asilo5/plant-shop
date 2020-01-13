@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
-import  { getPlants } from '../../apiCalls';
-import { addPlants, hasError } from '../../actions';
+import  { getPlants, deletePlantFetch } from '../../apiCalls';
+import { addPlants, hasError, deletePlant } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Route } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { Route } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import ViewPlant from '../../Components/ViewPlant/ViewPlant';
 import PlantsContainer from '../PlantsContainer/PlantsContainer';
-// import AddPlants from '../AddPlants';
+import AddPlants from '../AddPlants/AddPlants';
 // import FavouritesContainer from '../FavouritesContainer';
 import Header from '../../Components/Header/Header';
 
@@ -22,22 +22,29 @@ export class App extends Component  {
       .catch(err => hasError(err.error))
   }
 
+  deleteThePlant = (id) => {
+    const { deletePlant, hasError } = this.props;
+    deletePlantFetch(id)
+      .then(plants => deletePlant(plants.plants._id))
+      .catch(err => hasError(err.error))
+  }
+
   render() {
     return (
       <main>
          <NavBar />
          <Route exact path='/' component={Header} />
-         <Route exact path='/allPlants' component={PlantsContainer} />
+         <Route exact path='/allPlants' render={() => <PlantsContainer deleteThePlant={this.deleteThePlant} />} />
          <Route exact path='/plant/:id' render={ ({ match }) => {
            const { id } = match.params;
            const { allPlants } = this.props;
 
            let plantsList = allPlants.find((plant) => plant._id === id);
 
-           return <ViewPlant {...plantsList} />
+           return <ViewPlant {...plantsList} deleteThePlant={this.deleteThePlant} />
          } } />
-         {/* <Route exact path='/addPlants' component={AddPlants} /> */}
-         {/* <Route exact path='/favourites' component={FavouritesContainer} /> */}
+         <Route exact path='/addPlants' component={AddPlants} />
+         {/* <Route exact path='/lovedPlants' component={FavouritesContainer} /> */}
       </main>
     )
   }
@@ -50,7 +57,8 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => (
   bindActionCreators({
     addPlants: setPlants => dispatch( addPlants(setPlants) ),
-    hasError: error => dispatch( hasError(error) )
+    hasError: error => dispatch( hasError(error) ),
+    deletePlant: id => dispatch( deletePlant(id) )
   }, dispatch)
 )
 

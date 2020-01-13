@@ -9,22 +9,27 @@ exports[`App container App should match snapshot with all information passing in
     path="/"
   />
   <Route
-    component={
-      Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(PlantsContainer)",
-        "type": [Function],
-      }
-    }
     exact={true}
     path="/allPlants"
+    render={[Function]}
   />
   <Route
     exact={true}
     path="/plant/:id"
     render={[Function]}
+  />
+  <Route
+    component={
+      Object {
+        "$$typeof": Symbol(react.memo),
+        "WrappedComponent": [Function],
+        "compare": null,
+        "displayName": "Connect(AddPlants)",
+        "type": [Function],
+      }
+    }
+    exact={true}
+    path="/addPlants"
   />
 </main>
 `;

@@ -1,0 +1,54 @@
+.add-plant-section {
+    background: white;
+    width: 65%;
+    margin: 5em auto;
+    height: 75vh;
+    box-shadow: 10px 10px 10px #b4b1b1;
+    h2 {
+        text-align: center;
+        padding: 20px 0px 0px;
+        font-size: 3em;
+    }
+    .added-msg {
+        font-size: 20px;
+        color: green;
+        text-decoration: none;
+        margin: auto;
+        display: block;
+        &:hover {
+            border-bottom: 1px solid green;
+        }
+    }
+    .error-msg {
+      @extend .added-msg;
+      color: red;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 60%;
+        margin: auto;
+        label {
+           font-size: 25px;
+        }
+        input {
+           font-size: 20px;
+           margin-bottom: 20px;
+        }
+        button {
+            font-size: 28px;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 5px;
+            border: 1px solid cadetblue;
+            font-weight: bold;
+            color: cadetblue;
+            &:hover {
+                background-color: cadetblue;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
