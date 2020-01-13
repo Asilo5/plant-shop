@@ -1,8 +1,8 @@
 import React from  'react';
 import './FavouritesContainer.scss';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Plant from '../../Components/Plant/Plant';
-
 
 export const FavouritesContainer = ({favouritePlants, allPlants}) => {
 
@@ -28,5 +28,10 @@ export const mapStateToProps = ({favouritePlants, allPlants}) => ({
     favouritePlants,
     allPlants
 });
+
+FavouritesContainer.propType = {
+    favouritePlants: PropTypes.array,
+    allPlants: PropTypes.array
+};
 
 export default connect(mapStateToProps)(FavouritesContainer);
