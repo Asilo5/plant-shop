@@ -19,7 +19,7 @@ export const postPlant = async (plant) => {
     care: plant.care, 
     price: plant.price, 
     image: plant.image
-  };
+  }; 
 
   const options = {
     method: 'POST',
@@ -58,4 +58,5 @@ export const deletePlantFetch = async (id) => {
   }
 
    return data;
+  
 }
