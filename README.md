@@ -7,7 +7,7 @@ Looking to build your own home garden but have too many choices in different web
 
 ## View Plant Shop locally in your computer
 
-First, make sure to run the server of the [Plant Shop API](https://github.com/Asilo5/plant-shop-api) 
+First, make sure to run the server of the [Plant Shop API](https://github.com/Asilo5/plant-shop-api), an API I built for this project. 
 
 Once API server is running, clone the repo to your terminal :``` $ git clone https://github.com/Asilo5/plant-shop.git```
 
