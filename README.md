@@ -4,6 +4,8 @@ Looking to build your own home garden but have too many choices in different web
 
 Fear not, fellow plant parent! Plant Shop is here for you to store all your plants in a wish list. You can add an image, price, care, and description of your future plant baby. Don't want it anymore... delete the plant! Want more plants on your list.. add them!! Have specific favourites? Add them to your most loved list!! Plant Shop is here to save the day!
 
+Plant Shop was built using React and Redux for the UI. For the API, I decided to challenge myself for this project and build my own using NodeJS, Express, and MongoDB!
+
 ## Created by:
 [Amanda Consuelo Sierra](https://github.com/Asilo5)
 
